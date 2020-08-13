@@ -76,15 +76,15 @@
 
                                 <div class="col-md-6">
                                     <div class="form-check form-check-inline">
-                                        <input type="radio" id="radio_junior" class="inline form-control @error('level') is-invalid @enderror" name="level" value="junior" required autocomplete="level" autofocus {{($data['type'] == 'update' && $data['user']->level == 'junior')?'checked':''}}>
+                                        <input type="radio" id="radio_junior" class="inline @error('level') is-invalid @enderror" name="level" value="junior" required autocomplete="level" autofocus {{($data['type'] == 'update' && $data['user']->level == 'junior')?'checked':''}}>
                                         <label class="form-check-label" for="radio_junior">&nbsp;Junior</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input type="radio" id="radio_senior" class="inline form-control @error('level') is-invalid @enderror" name="level" value="senior" required autocomplete="level" autofocus {{($data['type'] == 'update' && $data['user']->level == 'senior')?'checked':''}}>
+                                        <input type="radio" id="radio_senior" class="inline  @error('level') is-invalid @enderror" name="level" value="senior" required autocomplete="level" autofocus {{($data['type'] == 'update' && $data['user']->level == 'senior')?'checked':''}}>
                                         <label class="form-check-label" for="radio_senior">&nbsp;Senior</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input type="radio" id="radio_associate" class="form-control @error('level') is-invalid @enderror" name="level" value="associate" required autocomplete="level" autofocus {{($data['type'] == 'update' && $data['user']->level == 'associate')?'checked':''}}>
+                                        <input type="radio" id="radio_associate" class="@error('level') is-invalid @enderror" name="level" value="associate" required autocomplete="level" autofocus {{($data['type'] == 'update' && $data['user']->level == 'associate')?'checked':''}}>
                                         <label class="form-check-label" for="radio_associate">&nbsp;Associate</label>
                                     </div>
 
