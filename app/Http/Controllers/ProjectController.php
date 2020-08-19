@@ -38,4 +38,8 @@ class ProjectController extends Controller
         Projects::destroy($id);
         return redirect()->route('projects_view')->with("status","Project Deleted Successfully");
     }
+
+    public function getAllProjects(){
+        return Projects::all();
+    }
 }

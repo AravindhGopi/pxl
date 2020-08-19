@@ -26,15 +26,20 @@
             background: #2c68a5;
             color: #fff;
         }
-        nav{
+
+        nav {
             background: #102c48;
         }
-        main{
+
+        main {
             background: aliceblue;
         }
 
-        nav a{
+        nav a {
             color: #fff !important;
+        }
+        nav .dropdown-menu a {
+            color: #000 !important;
         }
     </style>
 </head>
@@ -64,6 +69,16 @@
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Reports<span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{url('project_wise_report')}}">
+                                    {{ __('Project Wise') }}
+                                </a>
+                            </div>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{action('DailyReportController@create')}}">
                                 Daily Entry

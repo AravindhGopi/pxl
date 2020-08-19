@@ -28,6 +28,13 @@ Route::post('/projects', 'ProjectController@store')->name('projects_add');
 Route::put('/projects/{id}', 'ProjectController@update')->name('projects_update');
 Route::delete('/projects/{id}', 'ProjectController@delete')->name('projects_delete');
 Route::get('/projects/{id}', 'ProjectController@edit')->name('projects_edit');
+Route::get('getAllProjects', 'ProjectController@getAllProjects');
 
 Route::resource('holiday_calendar', 'HolidayCalendarController');
 Route::resource('daily_reports','DailyReportController');
+Route::view('project_wise_report','reports.project_wise_report');
+Route::post('projects_filter','DailyReportController@filterProjectWise');
+Route::get('generateProjectWiseReport/{user}/{project}/{selected_month}',function(){
+    return view('reports.generatedProjectWiseReport');
+});
+// Route::get('projectWiseReport','DailyReportController@projectWiseReport');
