@@ -1,6 +1,5 @@
 /node_modules
 /public/hot
-/config/database.php
 /public/storage
 /storage/*.key
 /vendor
@@ -11,3 +10,4 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+config/database.php
